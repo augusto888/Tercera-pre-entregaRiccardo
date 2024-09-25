@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Gimnasio</title>
+    <link rel="stylesheet" href="{% static 'gimnasio/styles.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Gimnasio</h1>
+    </header>
+
+    <!-- Menú de navegación -->
+    <nav>
+        <ul>
+            <li><a href="{% url 'index' %}">Inicio</a></li>
+            <li><a href="{% url 'crear_cliente' %}">Crear Cliente</a></li>
+            <li><a href="{% url 'crear_entrenador' %}">Crear Entrenador</a></li>
+            <li><a href="{% url 'crear_clase' %}">Crear Clase</a></li>
+            <li><a href="{% url 'listar_clases' %}">Listar Clases</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Gimnasio</p>
+    </footer>
+</body>
+</html>

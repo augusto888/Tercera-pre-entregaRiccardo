@@ -1,0 +1,18 @@
+{% extends 'gimnasio/base.html' %}
+
+{% block content %}
+<h1>Bienvenido al Gimnasio</h1>
+
+<!-- Menú de navegación -->
+<nav>
+    <ul>
+        <li><a href="{% url 'index' %}">Inicio</a></li>
+        <li><a href="{% url 'crear_cliente' %}">Crear Cliente</a></li>
+        <li><a href="{% url 'crear_entrenador' %}">Crear Entrenador</a></li>
+        <li><a href="{% url 'crear_clase' %}">Crear Clase</a></li>
+        <li><a href="{% url 'listar_clases' %}">Listar Clases</a></li>
+    </ul>
+</nav>
+
+<p>Aquí puedes gestionar todas las funcionalidades del gimnasio.</p>
+{% endblock %}
